@@ -1,0 +1,4 @@
+Time(Hours);EntityID;ObjectName;ProcessID;StepName;Action
+0.10980796203134;Camion.64;SalidaDeCamiones;2.OnEnteredProcessing;[Assign] AfterProcessingAssignments;Unable to get value of property 'SalidaDeCamiones.AssignmentsAfterProcessing.AssignmentsAfterProcessingNewValue'.
+0.10980796203134;Camion.64;SalidaDeCamiones;2.OnEnteredProcessing;[Assign] AfterProcessingAssignments;Referenced definition type 'OrdenEntity' does not match executing type 'CamionEntity'
+
