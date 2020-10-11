@@ -69,11 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factory\Link.cs" />
-    <Compile Include="Factory\Node.cs" />
+    <Compile Include="Factory\BasicNode.cs" />
     <Compile Include="Factory\Path.cs" />
     <Compile Include="Factory\Server.cs" />
     <Compile Include="Factory\SimioElement.cs" />
     <Compile Include="Factory\SimioFacade.cs" />
+    <Compile Include="Factory\TransferNode.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
