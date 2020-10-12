@@ -49,7 +49,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\[MYS1]ModeloBase_P37.spfx" />
+    <None Include="Resources\BaseModel.spfx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resource.resx">

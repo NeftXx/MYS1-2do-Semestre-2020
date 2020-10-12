@@ -4,7 +4,7 @@ namespace Practica3.Factory
 {
     abstract class SimioElement
     {
-        protected IFixedObject @object;
+        protected IIntelligentObject @object;
 
         public SimioElement()
         {               

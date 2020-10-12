@@ -6,12 +6,12 @@ namespace Practica3.Factory
     {
         public BasicNode(IIntelligentObjects intelligentObjects, int x, int y)
         {
-            @object = intelligentObjects.CreateObject("BasicNode", new FacilityLocation(x, 0, y)) as IFixedObject;
+            @object = intelligentObjects.CreateObject("BasicNode", new FacilityLocation(x, 0, y));
         }
 
         public INodeObject GetInput()
         {
-            return @object.Nodes[0];
+            return @object as INodeObject;
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Practica3.Factory
     {
         public TransferNode(IIntelligentObjects intelligentObjects, int x, int y) : base(intelligentObjects, x, y)
         {
-            @object = intelligentObjects.CreateObject("TransferNode", new FacilityLocation(x, 0, y)) as IFixedObject;
+            @object = intelligentObjects.CreateObject("TransferNode", new FacilityLocation(x, 0, y));
         }
     }
 }

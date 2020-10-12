@@ -6,7 +6,7 @@ namespace Practica3.Factory
     {
         public Server(IIntelligentObjects intelligentObjects, int x, int y)
         {
-            @object = intelligentObjects.CreateObject("Server", new FacilityLocation(x, 0, y)) as IFixedObject;
+            @object = intelligentObjects.CreateObject("Server", new FacilityLocation(x, 0, y));
         }
 
         public void UpdateInitialCapacity(string capacity)
@@ -31,12 +31,12 @@ namespace Practica3.Factory
 
         public INodeObject GetInput()
         {
-            return @object.Nodes[0];
+            return ((IFixedObject)@object).Nodes[0];
         }
 
         public INodeObject GetOutput()
         {
-            return @object.Nodes[1];
+            return ((IFixedObject)@object).Nodes[1];
         }
     }
 }
