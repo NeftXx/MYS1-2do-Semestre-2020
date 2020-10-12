@@ -25,6 +25,7 @@ namespace Practica3.Factory
                 IModel model = project.Models[1];
                 IIntelligentObjects intelligentObjects = model.Facility.IntelligentObjects;
                 CreateRegions(intelligentObjects);
+                CreateCard201504420(intelligentObjects);
                 SimioProjectFactory.SaveProject(project, finalModelPath, out warnings);
                 System.IO.File.WriteAllLines(WARNINGS_FILE_PATH, warnings);
             } catch (Exception e)
@@ -51,6 +52,19 @@ namespace Practica3.Factory
             region6.UpdateName("Region6");
             region7.UpdateName("Region7");
             region8.UpdateName("Region8");
+        }
+
+        private void CreateCard201504420(IIntelligentObjects intelligentObjects)
+        {
+            Draw.NumberCreator.CreateTwo(intelligentObjects, 0, -340);
+            Draw.NumberCreator.CreateZero(intelligentObjects, 40, -340);
+            Draw.NumberCreator.CreateOne(intelligentObjects, 80, -340);
+            Draw.NumberCreator.CreateFive(intelligentObjects, 110, -340);
+            Draw.NumberCreator.CreateZero(intelligentObjects, 150, -340);
+            Draw.NumberCreator.CreateFour(intelligentObjects, 190, -340);
+            Draw.NumberCreator.CreateFour(intelligentObjects, 230, -340);
+            Draw.NumberCreator.CreateTwo(intelligentObjects, 270, -340);
+            Draw.NumberCreator.CreateZero(intelligentObjects, 310, -340);
         }
 
         public static SimioFacade GetInstance()

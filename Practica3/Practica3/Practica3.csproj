@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\Draw\NumberCreator.cs" />
     <Compile Include="Factory\Link.cs" />
     <Compile Include="Factory\BasicNode.cs" />
     <Compile Include="Factory\Path.cs" />
