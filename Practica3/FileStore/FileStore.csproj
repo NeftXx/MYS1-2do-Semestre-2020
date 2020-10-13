@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BaseModel.spfx" />
+    <None Include="Resources\Coordinates.csv" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resource.resx">

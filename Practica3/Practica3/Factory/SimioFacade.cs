@@ -1,5 +1,6 @@
 ﻿using SimioAPI;
 using System;
+using System.Collections.Generic;
 
 namespace Practica3.Factory
 {
@@ -20,6 +21,12 @@ namespace Practica3.Factory
         {
             try
             {
+                List<Util.Coordinate> lista = Util.ReadCSV.GetCoordanates();
+
+
+
+
+
                 System.IO.File.WriteAllBytes(BASE_MODEL_PATH, FileStore.Resource.BaseModel);
                 ISimioProject project = SimioProjectFactory.LoadProject(BASE_MODEL_PATH, out string[] warnings);
                 IModel model = project.Models[1];
@@ -27,6 +34,9 @@ namespace Practica3.Factory
                 CreateRegions(intelligentObjects);
                 CreateCarnet201503918(intelligentObjects);
                 CreateCard201504420(intelligentObjects);
+
+                
+
                 SimioProjectFactory.SaveProject(project, finalModelPath, out warnings);
                 System.IO.File.WriteAllLines(WARNINGS_FILE_PATH, warnings);
             } catch (Exception e)
