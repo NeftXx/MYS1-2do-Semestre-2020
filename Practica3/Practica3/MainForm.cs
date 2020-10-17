@@ -16,11 +16,13 @@ namespace Practica3
             bar.Value = 20;
             Factory.SimioFacade simio = Factory.SimioFacade.GetInstance();
             bar.Value = 30;
-            simio.CreateModel(Factory.SimioFacade.FINAL_MODEL_PATH);
-            bar.Value = 85;
             simio.CreateCards();
-            bar.Value = 100;
-            System.Threading.Thread.Sleep(5000);
+            bar.Value = 50;
+            simio.CreateModel(Factory.SimioFacade.FINAL_MODEL_PATH);
+            System.Threading.Thread.Sleep(6000);
+            bar.Value = 85;
+            System.Threading.Thread.Sleep(6000);
+            bar.Value = 100;            
             bar.Visible = false;
         }
     }

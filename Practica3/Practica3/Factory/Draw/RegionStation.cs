@@ -2,13 +2,13 @@
 
 namespace Practica3.Factory.Draw
 {
-    class Airport
+    class RegionStation
     {
         private readonly Source source;
         private readonly Server station;
         private readonly Sink exit;
 
-        public Airport(
+        public RegionStation(
             string name, IIntelligentObjects intelligentObjects, int x, int y, string interarrivalTime,
             string capacityStation, string processingTime, string probability
         )
@@ -16,8 +16,9 @@ namespace Practica3.Factory.Draw
             source = new Source(intelligentObjects, x, y);
             source.UpdateInterarrivalTime(interarrivalTime);
             source.UpdateName("Llegada_" + name);
+            source.UpdateEntityType("Turista");
             station = new Server(intelligentObjects, x + 2, y + 2);
-            station.UpdateInputBufferCapacity(capacityStation);
+            station.UpdateInitialCapacity(capacityStation);
             station.UpdateProcessingTime(processingTime);
             station.UpdateName("Estacion_" + name);
             station.GetOutput().Properties["OutboundLinkRule"].Value = "By Link Weight";
@@ -30,9 +31,9 @@ namespace Practica3.Factory.Draw
             path.UpdateSelectionWeight(probability);
         }
 
-        public void setDestinationStation(IIntelligentObjects intelligentObjects, Airport destinationstation, string distance, string probability)
+        public void SetDestinationStation(IIntelligentObjects intelligentObjects, INodeObject destinationstation, string distance, string probability)
         {
-            Path path = new Path(intelligentObjects, station.GetOutput(), destinationstation.GetInput());
+            Path path = new Path(intelligentObjects, station.GetOutput(), destinationstation);
             path.UpdateDrawToScale("False");
             path.UpdateLogicalLength(distance);
             path.UpdateSelectionWeight(probability);

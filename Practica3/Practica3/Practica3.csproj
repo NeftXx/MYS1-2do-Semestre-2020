@@ -61,6 +61,9 @@
     <Reference Include="SimioReplicationRunnerContracts">
       <HintPath>..\SimioAPI\SimioReplicationRunnerContracts.dll</HintPath>
     </Reference>
+    <Reference Include="SimioServerAPI">
+      <HintPath>..\SimioAPI\SimioServerAPI.dll</HintPath>
+    </Reference>
     <Reference Include="SimioTypes">
       <HintPath>..\SimioAPI\SimioTypes.dll</HintPath>
     </Reference>
@@ -78,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factory\Draw\NumberCreator.cs" />
-    <Compile Include="Factory\Draw\Airport.cs" />
+    <Compile Include="Factory\Draw\RegionStation.cs" />
     <Compile Include="Factory\Link.cs" />
     <Compile Include="Factory\BasicNode.cs" />
     <Compile Include="Factory\Path.cs" />

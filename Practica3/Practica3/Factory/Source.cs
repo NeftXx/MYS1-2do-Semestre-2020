@@ -24,6 +24,11 @@ namespace Practica3.Factory
             @object.Properties["MaximumArrivals"].Value = maximumArrivals;
         }
 
+        public void UpdateEntitiesPerArrival(string entitiesPerArrival)
+        {
+            @object.Properties["EntitiesPerArrival"].Value = entitiesPerArrival;
+        }
+
         public INodeObject GetOutput()
         {
             return ((IFixedObject)@object).Nodes[0];
