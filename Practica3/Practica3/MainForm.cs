@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Practica3
@@ -15,6 +8,20 @@ namespace Practica3
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void BtnGenerateModel_Click(object sender, EventArgs e)
+        {
+            bar.Visible = true;
+            bar.Value = 20;
+            Factory.SimioFacade simio = Factory.SimioFacade.GetInstance();
+            bar.Value = 30;
+            simio.CreateModel(Factory.SimioFacade.FINAL_MODEL_PATH);
+            bar.Value = 85;
+            simio.CreateCards();
+            bar.Value = 100;
+            System.Threading.Thread.Sleep(5000);
+            bar.Visible = false;
         }
     }
 }

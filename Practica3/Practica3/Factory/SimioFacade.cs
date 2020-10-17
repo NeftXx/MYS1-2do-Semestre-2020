@@ -154,6 +154,39 @@ namespace Practica3.Factory
                     "Peten", intelligentObjects, COORDINATES[14], COORDINATES[15] - 2,
                     "Random.Poisson(4)", "150", "Random.Exponential(4)", "0.5"
             );
+
+            // conections
+            metropolitana.setDestinationStation(intelligentObjects, central, "63000", "0.30");
+            metropolitana.setDestinationStation(intelligentObjects, sur_oriente, "124000", "0.15");
+            metropolitana.setDestinationStation(intelligentObjects, nor_oriente, "241000", "0.20");
+
+            norte.setDestinationStation(intelligentObjects, peten, "147000", "0.40");
+            norte.setDestinationStation(intelligentObjects, nor_oriente, "138000", "0.10");
+            norte.setDestinationStation(intelligentObjects, peten, "145000", "0.10");
+
+            nor_oriente.setDestinationStation(intelligentObjects, metropolitana, "241000", "0.30");
+            nor_oriente.setDestinationStation(intelligentObjects, norte, "138000", "0.15");
+            nor_oriente.setDestinationStation(intelligentObjects, sur_oriente, "231000", "0.05");
+            nor_oriente.setDestinationStation(intelligentObjects, peten, "282000", "0.30");
+
+            sur_oriente.setDestinationStation(intelligentObjects, nor_oriente, "231000", "0.20");
+            sur_oriente.setDestinationStation(intelligentObjects, metropolitana, "124000", "0.25");
+            sur_oriente.setDestinationStation(intelligentObjects, central, "154000", "0.15");
+
+            central.setDestinationStation(intelligentObjects, metropolitana, "63000", "0.35");
+            central.setDestinationStation(intelligentObjects, sur_oriente, "154000", "0.05");
+            central.setDestinationStation(intelligentObjects, sur_occidente, "155000", "0.15");
+            central.setDestinationStation(intelligentObjects, nor_occidente, "269000", "0.10");
+
+            sur_occidente.setDestinationStation(intelligentObjects, nor_occidente, "87000", "0.30");
+            sur_occidente.setDestinationStation(intelligentObjects, central, "155000", "0.35");
+
+            nor_occidente.setDestinationStation(intelligentObjects, sur_occidente, "87000", "0.30");
+            nor_occidente.setDestinationStation(intelligentObjects, central, "269000", "0.10");
+            nor_occidente.setDestinationStation(intelligentObjects, norte, "145000", "0.20");
+
+            peten.setDestinationStation(intelligentObjects, norte, "147000", "0.25");
+            peten.setDestinationStation(intelligentObjects, nor_oriente, "282000", "0.25");
         }
 
         public void CreateCards()

@@ -30,6 +30,14 @@ namespace Practica3.Factory.Draw
             path.UpdateSelectionWeight(probability);
         }
 
+        public void setDestinationStation(IIntelligentObjects intelligentObjects, Airport destinationstation, string distance, string probability)
+        {
+            Path path = new Path(intelligentObjects, station.GetOutput(), destinationstation.GetInput());
+            path.UpdateDrawToScale("False");
+            path.UpdateLogicalLength(distance);
+            path.UpdateSelectionWeight(probability);
+        }
+
         public INodeObject GetInput()
         {
             return station.GetInput();
