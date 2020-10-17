@@ -8,5 +8,20 @@ namespace Practica3.Factory
             : base(intelligentObjects, node1, node2, "Path")
         {
         }
+
+        public void UpdateDrawToScale(string capacity)
+        {
+            @object.Properties["DrawnToScale"].Value = capacity;
+        }
+
+        public void UpdateLogicalLength(string capacity)
+        {
+            @object.Properties["LogicalLength"].Value = capacity;
+        }
+
+        public void UpdateSelectionWeight(string selectionWeight)
+        {
+            @object.Properties["SelectionWeight"].Value = selectionWeight;
+        }
     }
 }

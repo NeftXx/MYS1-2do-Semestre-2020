@@ -40,6 +40,9 @@
     <Reference Include="QlmLicenseLib">
       <HintPath>..\SimioAPI\QlmLicenseLib.dll</HintPath>
     </Reference>
+    <Reference Include="Simio.resources">
+      <HintPath>..\SimioAPI\Simio.resources.dll</HintPath>
+    </Reference>
     <Reference Include="SimioAPI">
       <HintPath>..\SimioAPI\SimioAPI.dll</HintPath>
     </Reference>
@@ -53,7 +56,13 @@
       <HintPath>..\SimioAPI\SimioDLL.dll</HintPath>
     </Reference>
     <Reference Include="SimioEnums">
-      <HintPath>..\..\..\..\..\Desktop\DemoModela1\DemoModela1\SimioEnums.dll</HintPath>
+      <HintPath>..\SimioAPI\SimioEnums.dll</HintPath>
+    </Reference>
+    <Reference Include="SimioReplicationRunnerContracts">
+      <HintPath>..\SimioAPI\SimioReplicationRunnerContracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SimioServerAPI">
+      <HintPath>..\SimioAPI\SimioServerAPI.dll</HintPath>
     </Reference>
     <Reference Include="SimioTypes">
       <HintPath>..\SimioAPI\SimioTypes.dll</HintPath>
@@ -71,14 +80,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factory\Util\Coordinate.cs" />
     <Compile Include="Factory\Draw\NumberCreator.cs" />
+    <Compile Include="Factory\Draw\RegionStation.cs" />
     <Compile Include="Factory\Link.cs" />
     <Compile Include="Factory\BasicNode.cs" />
     <Compile Include="Factory\Path.cs" />
     <Compile Include="Factory\Server.cs" />
     <Compile Include="Factory\SimioElement.cs" />
     <Compile Include="Factory\SimioFacade.cs" />
+    <Compile Include="Factory\Sink.cs" />
+    <Compile Include="Factory\Source.cs" />
     <Compile Include="Factory\TransferNode.cs" />
     <Compile Include="Factory\Util\ReadCSV.cs" />
     <Compile Include="MainForm.cs">

@@ -14,6 +14,11 @@ namespace Practica3.Factory
             @object.Properties["InitialCapacity"].Value = capacity;
         }
 
+        public void UpdateInputBufferCapacity(string inputBufferCapacity)
+        {
+            @object.Properties["InputBufferCapacity"].Value = inputBufferCapacity;
+        }
+
         public string GetInitialCapacity()
         {
             return @object.Properties["InitialCapacity"].Value;

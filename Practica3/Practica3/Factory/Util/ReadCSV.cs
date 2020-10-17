@@ -10,24 +10,28 @@ namespace Practica3.Factory.Util
 {
     class ReadCSV
     {
-        public static List<Coordinate> GetCoordanates()
+        public static List<BasicNode> GetCoordanates(SimioAPI.IIntelligentObjects intelligentObjects)
         {
-            List<Coordinate> lista = new List<Coordinate>();
+            List<BasicNode> list = new List<BasicNode>();
             var csvTable = new DataTable();
             using (var csvReader = new CsvReader(new StringReader(FileStore.Resource.Coordinates), true))
             {
                 csvTable.Load(csvReader);
             }
-            string h = "";
+            BasicNode basicNode;
             for (int i = 0; i < csvTable.Rows.Count; i++)
             {
 
-                lista.Add(new Coordinate {
-                    X = int.Parse(csvTable.Rows[i][0].ToString()),
-                    Y = int.Parse(csvTable.Rows[i][1].ToString())
-                });
+                basicNode = new BasicNode(
+                    intelligentObjects,
+                    int.Parse(csvTable.Rows[i][0].ToString()),
+                    int.Parse(csvTable.Rows[i][1].ToString()),
+                    csvTable.Rows[i][2].ToString()
+                    );
+                basicNode.UpdateOutboundLinkRule("By Link Weight");
+                list.Add(basicNode);
             }
-            return lista;
+            return list;
         }
     }
 }
