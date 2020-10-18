@@ -34,8 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LumenWorks.Framework.IO, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5ad3ea2f85776344, processorArchitecture=MSIL">
+      <HintPath>..\packages\LumenWorksCsvReader.4.0.0\lib\net461\LumenWorks.Framework.IO.dll</HintPath>
+    </Reference>
     <Reference Include="QlmLicenseLib">
       <HintPath>..\SimioAPI\QlmLicenseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Simio.resources">
+      <HintPath>..\SimioAPI\Simio.resources.dll</HintPath>
     </Reference>
     <Reference Include="SimioAPI">
       <HintPath>..\SimioAPI\SimioAPI.dll</HintPath>
@@ -50,7 +56,13 @@
       <HintPath>..\SimioAPI\SimioDLL.dll</HintPath>
     </Reference>
     <Reference Include="SimioEnums">
-      <HintPath>..\..\..\..\..\Desktop\DemoModela1\DemoModela1\SimioEnums.dll</HintPath>
+      <HintPath>..\SimioAPI\SimioEnums.dll</HintPath>
+    </Reference>
+    <Reference Include="SimioReplicationRunnerContracts">
+      <HintPath>..\SimioAPI\SimioReplicationRunnerContracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SimioServerAPI">
+      <HintPath>..\SimioAPI\SimioServerAPI.dll</HintPath>
     </Reference>
     <Reference Include="SimioTypes">
       <HintPath>..\SimioAPI\SimioTypes.dll</HintPath>
@@ -68,13 +80,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\Draw\NumberCreator.cs" />
+    <Compile Include="Factory\Draw\RegionStation.cs" />
     <Compile Include="Factory\Link.cs" />
     <Compile Include="Factory\BasicNode.cs" />
     <Compile Include="Factory\Path.cs" />
     <Compile Include="Factory\Server.cs" />
     <Compile Include="Factory\SimioElement.cs" />
     <Compile Include="Factory\SimioFacade.cs" />
+    <Compile Include="Factory\Sink.cs" />
+    <Compile Include="Factory\Source.cs" />
     <Compile Include="Factory\TransferNode.cs" />
+    <Compile Include="Factory\Util\ReadCSV.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +113,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
