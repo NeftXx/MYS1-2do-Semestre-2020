@@ -1,0 +1,4 @@
+Time(Hours);EntityID;ObjectName;ProcessID;StepName;Action
+0;--;--;--;--;Warning assigning state variable 'Cajero[1].RideStation.CurrentCapacity' the value '-1'.
+0;--;--;--;--;The value of the state variable may not be negative and will be automatically adjusted to zero. However, this action may indicate a problem in the modeled logic.
+

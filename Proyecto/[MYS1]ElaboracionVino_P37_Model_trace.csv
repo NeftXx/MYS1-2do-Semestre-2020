@@ -1,0 +1,4 @@
+Time(Hours);EntityID;ObjectName;ProcessID;StepName;Action
+72;Model;Model;319.OnRunEnding;[ExcelWrite] ExcelWrite1;Unable to get value of property 'ExcelWrite.Items.Expression'.
+72;Model;Model;319.OnRunEnding;[ExcelWrite] ExcelWrite1;Bad index into the state array
+
