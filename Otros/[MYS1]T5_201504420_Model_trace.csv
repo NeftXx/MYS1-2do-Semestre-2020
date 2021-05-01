@@ -1,0 +1,4 @@
+Time(Hours);EntityID;ObjectName;ProcessID;StepName;Action
+0;Cartero[1];Model;6.EscogerCasa;[Assign] Assign1;Unable to get value of property 'Assign.StateVariableName'.
+0;Cartero[1];Model;6.EscogerCasa;[Assign] Assign1;Referenced definition type 'PackageEntity' does not match executing type 'Vehicle'
+

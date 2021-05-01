@@ -1,0 +1,4 @@
+Time(Hours);EntityID;ObjectName;ProcessID;StepName;Action
+12.2031198412697;Cliente.41;Output@CajeroTienda2;2.OnEnteredFromAssociatedObject;[Assign] OnEnteringAssignments;Unable to get value of property 'CajeroTienda2.MemberMatchExpression'.
+12.2031198412697;Cliente.41;Output@CajeroTienda2;2.OnEnteredFromAssociatedObject;[Assign] OnEnteringAssignments;Referenced definition type 'GaseosaEntity' does not match executing type 'ClienteEntity'
+
